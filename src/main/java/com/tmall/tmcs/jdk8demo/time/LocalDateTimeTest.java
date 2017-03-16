@@ -41,10 +41,19 @@ public class LocalDateTimeTest {
         System.out.println("2017年第100天的日期"+yearDay);
 
         //字符串转换为日期类型
-       LocalDate parseDate =  LocalDate.parse("2017-02-13");
+       LocalDate parseDate =  LocalDate.parse("2017-02-01");
         System.out.println("字符串转换为日期:"+parseDate);
         LocalDate parseDate2 =  LocalDate.parse("2017.02.13", DateTimeFormatter.ofPattern("yyyy.MM.dd"));
         System.out.println("字符串转换为日期:"+parseDate2);
+
+        LocalDate preParseDate = parseDate.plusMonths(-1L);
+        System.out.println("上个月是"+preParseDate);
+
+
+        LocalDateTime localDateTime  = LocalDateTime.now();
+
+        System.out.println(localDateTime.format(DateTimeFormatter.ofPattern("yyyyMMdd")));
+
     }
 
 
