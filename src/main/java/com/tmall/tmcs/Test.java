@@ -11,7 +11,7 @@ import java.util.Map;
 public class Test {
 
     public static void main(String[] args) {
-        Map<String, Object> paramsMap = new HashMap<>();
+        Map<String, Object> paramsMap = new HashMap<String,Object>();
         paramsMap.put("userId",1224);
         paramsMap.put("aearId",1234);
         System.out.println(JSON.toJSONString(paramsMap));
