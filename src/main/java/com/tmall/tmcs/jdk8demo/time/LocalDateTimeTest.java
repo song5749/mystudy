@@ -52,7 +52,11 @@ public class LocalDateTimeTest {
 
         LocalDateTime localDateTime  = LocalDateTime.now();
 
-        System.out.println(localDateTime.format(DateTimeFormatter.ofPattern("yyyyMMdd")));
+        System.out.println(localDateTime.format(DateTimeFormatter.ofPattern("yyyyMM")));
+//
+//        LocalDateTime parseDat3 =  LocalDateTime.parse("2017-02-13 00:00:00", DateTimeFormatter.ofPattern("yyyy-MM-01 HH:mm:ss"));
+//        System.out.println(parseDat3);
+
 
     }
 

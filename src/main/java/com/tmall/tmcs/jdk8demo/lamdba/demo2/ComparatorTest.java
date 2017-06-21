@@ -24,7 +24,17 @@ public class ComparatorTest {
                 return length == 0 ? o1.compareTo(o2) : length;
             }
         });
-
         System.out.println(list);
+
+        List<Integer>  integerList  = new ArrayList<>();
+        integerList.add(10);
+        integerList.add(1);
+        integerList.add(3);
+        integerList.add(5);
+
+        integerList.sort((e,x) -> {
+            return  -e.compareTo(x);
+        });
+        System.out.println(integerList);
     }
 }
