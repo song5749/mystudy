@@ -1,5 +1,7 @@
 package com.tmall.tmcs.queue;
 
+import java.util.concurrent.ConcurrentLinkedQueue;
+
 /**
  * Created by Administrator on 2017/6/22.
  * ConcurrentLinkedQueue 是适合高并发场景的队列，通过无锁的方式实现高并发下的高性能，
@@ -15,6 +17,19 @@ package com.tmall.tmcs.queue;
 public class ConcurrentLinkedQueueTest {
 
     public static void main(String[] args) {
+        ConcurrentLinkedQueue<String> concurrentLinkedQueue = new ConcurrentLinkedQueue<>();
+
+        concurrentLinkedQueue.add("a");
+
+        concurrentLinkedQueue.offer("b");
+        concurrentLinkedQueue.offer("c");
+
+        System.out.println(concurrentLinkedQueue.poll());
+        System.out.println(concurrentLinkedQueue.size());
+        System.out.println(concurrentLinkedQueue.peek());
+        System.out.println(concurrentLinkedQueue.size());
+
+
 
     }
 }
