@@ -1,4 +1,4 @@
-package com.tmall.tmcs.masterwork;
+package com.tmall.tmcs.thread.masterwork;
 
 /**
  * Created by Administrator on 2017/12/6.

@@ -1,4 +1,4 @@
-package com.tmall.tmcs.queue;
+package com.tmall.tmcs.thread.queue;
 
 /**
  * Created by Administrator on 2017/7/2.

@@ -1,4 +1,4 @@
-package com.tmall.tmcs.masterwork;
+package com.tmall.tmcs.thread.masterwork;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;

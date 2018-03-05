@@ -1,10 +1,6 @@
-package com.tmall.tmcs.queue;
+package com.tmall.tmcs.thread.queue;
 
-import com.google.common.collect.Lists;
-
-import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.SynchronousQueue;
 
 /**

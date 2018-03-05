@@ -1,4 +1,4 @@
-package com.tmall.tmcs.queue;
+package com.tmall.tmcs.thread.queue;
 
 import java.util.concurrent.PriorityBlockingQueue;
 

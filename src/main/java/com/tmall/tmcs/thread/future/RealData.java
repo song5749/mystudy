@@ -1,4 +1,4 @@
-package com.tmall.tmcs.future;
+package com.tmall.tmcs.thread.future;
 
 /**
  * Created by Administrator on 2017/12/4.

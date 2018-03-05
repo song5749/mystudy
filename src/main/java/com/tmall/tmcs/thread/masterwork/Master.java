@@ -1,4 +1,4 @@
-package com.tmall.tmcs.masterwork;
+package com.tmall.tmcs.thread.masterwork;
 
 import java.util.HashMap;
 import java.util.Map;
