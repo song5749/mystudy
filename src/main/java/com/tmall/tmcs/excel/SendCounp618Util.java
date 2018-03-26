@@ -16,6 +16,7 @@ import sun.reflect.generics.tree.Tree;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.text.DecimalFormat;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +30,7 @@ import java.util.stream.Collectors;
 public class SendCounp618Util {
 
     public static void main(String[] args) throws Exception {
-        InputStream excelFile = new FileInputStream("E:/发券生成测试.xlsx");
+        InputStream excelFile = new FileInputStream("/Users/shaokun.ssk/work/text/天猫超市女王节包邮商品清单-进天猫榜单-3.5.xlsx");
 
         Workbook wb = null;
         try {
@@ -37,11 +38,39 @@ public class SendCounp618Util {
         } catch (Exception ex) {
             wb = new HSSFWorkbook(excelFile);
         }
-        Sheet counturySheet =  wb.getSheet("全国优惠券");
-        Sheet citySheet =  wb.getSheet("城市优惠券");
+        Sheet sheet = wb.getSheetAt(0);
 
-        getAllJson(counturySheet);
-        getAllJson(citySheet);
+        Iterator<Row> IterableCell =  sheet.iterator();
+        int i = 1;
+        while (IterableCell.hasNext()){
+            Row row = IterableCell.next();
+            if(row.getRowNum() == 0){
+                continue;
+            }
+            Cell cell =  row.getCell(0);
+
+            String itemid = "";
+            try {
+                double cellValue = cell.getNumericCellValue();
+                itemid =new DecimalFormat("#").format(cellValue);
+            } catch (Exception e) {
+                itemid = cell.getStringCellValue()+"";
+            }
+            if("0".equals(itemid)){
+                continue;
+            }
+            System.out.println("insert into nianhuo_broad(id,gmt_create,gmt_modified,item_id) values("+i+",now(),now()," +itemid +");");
+            i++;
+
+
+        }
+
+
+//        Sheet counturySheet =  wb.getSheet("全国优惠券");
+//        Sheet citySheet =  wb.getSheet("城市优惠券");
+//
+//        getAllJson(counturySheet);
+//        getAllJson(citySheet);
 
     }
 
