@@ -2,6 +2,7 @@ package com.tmall.tmcs.thread.executor;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * Executor框架
@@ -37,6 +38,8 @@ public class UserExecutors {
          * 类似于java的 TIMES 定时器
          */
         ExecutorService pool4 = Executors.newScheduledThreadPool(10);
+
+        //new ThreadPoolExecutor()
     }
 
 }

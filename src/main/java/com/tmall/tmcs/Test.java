@@ -26,6 +26,19 @@ public class Test {
         Integer i = new Integer(1);
 
         System.out.println(list.contains(i));
+
+        List<Boolean> list1 = Lists.newArrayList();
+        list1.add(false);
+        list1.add(true);
+        list1.add(false);
+        list1.add(true);
+        list1.sort((x,y)->{
+            System.out.println(x.compareTo(y)+"");
+            return x.compareTo(y);
+        });
+
+        System.out.printf("list1:"+JSON.toJSONString(list1));
+
     }
 
 
