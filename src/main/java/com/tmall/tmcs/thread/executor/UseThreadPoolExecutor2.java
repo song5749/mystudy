@@ -20,8 +20,8 @@ public class UseThreadPoolExecutor2 {
          * *
          */
         BlockingQueue blockingQueue =
-                //new LinkedBlockingQueue();
-                    new ArrayBlockingQueue(10);
+                new LinkedBlockingQueue();
+                  //  new ArrayBlockingQueue(10);
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(
                 5, //corePoolSize 核心线程
                 10, //最大线程数
