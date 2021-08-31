@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static com.google.common.collect.Lists.*;
+
 /**
  * Created by shaokun.sanjie on 2016/12/27.
  */
@@ -21,13 +23,13 @@ public class Test {
         TestA  a = new TestA();
         a.setI(null);
 
-        List<Integer> list  = Lists.newArrayList(1,2);
+        List<Integer> list  = newArrayList(1,2);
 
         Integer i = new Integer(1);
 
         System.out.println(list.contains(i));
 
-        List<Boolean> list1 = Lists.newArrayList();
+        List<Boolean> list1 = newArrayList();
         list1.add(false);
         list1.add(true);
         list1.add(false);
